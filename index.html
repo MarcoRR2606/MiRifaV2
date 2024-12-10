@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Agregado para usar íconos -->
+    <title>MiRifaV2</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header a img {
+            max-width: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header a img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-bar {
+            margin-top: 15px;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-bar li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        .nav-bar li:last-child a {
+            font-size: 22px; /* Aumentar el tamaño del ícono */
+            padding: 12px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+        }
+
+        .nav-bar li:last-child a:hover {
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        main {
+            padding: 60px;
+            text-align: center;
+            background-color: #fff;
+            margin: 40px auto;
+            border-radius: 25px;
+            max-width: 850px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-30px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        main:hover {
+            transform: translateY(0);
+        }
+
+        main h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #003366;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        main p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #666;
+        }
+
+        .cta-button {
+            text-decoration: none;
+            background-color: #ffcc00;
+            color: #003366;
+            font-size: 20px;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #ff9900;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Fondo de la página */
+        .background-image {
+            background: url('images/background.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            main {
+                padding: 40px;
+                margin: 20px;
+            }
+
+            main h1 {
+                font-size: 36px;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+            }
+
+            .nav-bar li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .nav-bar a {
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#"><img src="images/logo.png" alt="MiRifa"></a>
+        <nav class="nav-bar">
+            <ul class="nav-ul">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="php/rifa.php">Rifas</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="php/login.php"><i class="fas fa-user"></i></a></li> <!-- Logo de perfil como botón -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bienvenido a MiRifa</h1>
+        <p>¡Participa y gana increíbles premios! Explora nuestras rifas y encuentra el número afortunado. Haz tu compra ahora y conviértete en uno de los ganadores.</p>
+        <a href="php/rifa.php" class="cta-button">Ver Rifas</a>
+    </main>
+
+    <footer>
+        <h2>Redes Sociales</h2>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Youtube</a>
+        <p>MiRifa 2024. Todos los derechos reservados</p>
+    </footer>
+
+    <div class="background-image"></div>
+
+</body>
+</html>
